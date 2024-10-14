@@ -16,20 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOb-ZQ-7xB">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOb-ZQ-7xB">
+                                <rect key="frame" x="-20" y="19" width="724" height="1086"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gwen Drawing 2021" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-Yc-ah1">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="1086"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="bottom" secondItem="iov-rx-QHI" secondAttribute="bottom" id="Aeg-hT-5TC"/>
+                                    <constraint firstItem="5dw-Yc-ah1" firstAttribute="width" secondItem="iov-rx-QHI" secondAttribute="width" id="Msx-x4-QGV"/>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="trailing" secondItem="iov-rx-QHI" secondAttribute="trailing" id="QPD-xr-j2p"/>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="top" secondItem="iov-rx-QHI" secondAttribute="top" id="Vkp-Vo-tAM"/>
+                                    <constraint firstItem="5dw-Yc-ah1" firstAttribute="centerX" secondItem="iov-rx-QHI" secondAttribute="centerX" id="btg-dt-G3y"/>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="centerY" secondItem="TOb-ZQ-7xB" secondAttribute="centerY" id="cfb-5R-Uf1"/>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="centerX" secondItem="TOb-ZQ-7xB" secondAttribute="centerX" id="dV7-SS-gDT"/>
                                     <constraint firstItem="5dw-Yc-ah1" firstAttribute="leading" secondItem="iov-rx-QHI" secondAttribute="leading" id="rUn-nD-xjY"/>
+                                    <constraint firstItem="5dw-Yc-ah1" firstAttribute="centerY" secondItem="iov-rx-QHI" secondAttribute="centerY" id="s6v-xl-rDU"/>
+                                    <constraint firstItem="5dw-Yc-ah1" firstAttribute="height" secondItem="iov-rx-QHI" secondAttribute="height" id="u41-fH-zax"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="iov-rx-QHI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="fps-z0-tDt"/>
@@ -38,12 +42,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TOb-ZQ-7xB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="108-eZ-4yt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TOb-ZQ-7xB" secondAttribute="bottom" id="97H-PW-6DQ"/>
-                            <constraint firstItem="TOb-ZQ-7xB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wuc-Ut-zmC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TOb-ZQ-7xB" secondAttribute="trailing" id="yNp-M5-MtX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="TOb-ZQ-7xB" secondAttribute="leading" constant="20" id="hBr-xg-MiM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gwenDrawingImage" destination="5dw-Yc-ah1" id="Owj-Bi-ToI"/>
+                        <outlet property="scrollView" destination="TOb-ZQ-7xB" id="Wth-Dy-5gC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
